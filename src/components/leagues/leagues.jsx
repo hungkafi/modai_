@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 const LeaguesPage = ({ t }) => {
   const [StandingData, setStandingData] = useState(null);
   const [tournamentsData, setTournamentsData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
+  const [loading, setLoading] = useState(true); // Ban đầu đặt loading là true
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -23,26 +22,28 @@ const LeaguesPage = ({ t }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch standings data
-        // const standingsResponse = await fetch(`http://localhost:8080/api/v1/standings/${id_params}?season=${season_params}`);
-
-
-        // Fake data
+        // Fake data fetch
         const standingsResponse = await fetch(tournamentsurl);
         if (!standingsResponse.ok) {
           throw new Error('Network response for standings was not ok');
         }
         const standingsResult = await standingsResponse.json();
         const standingResult = standingsResult.find(item => String(item.id) === id_params);
-        setTournamentsData(standingResult);
 
         const responseStanding = await fetch(standingsUrl);
         if (!responseStanding.ok) {
           throw new Error('Network response was not ok');
         }
         const result = await responseStanding.json();
+
         setStandingData(result);
+        setTournamentsData(standingResult);
+
+        // Sau khi fetch xong dữ liệu, đặt loading thành false
+        setLoading(false);
       } catch (error) {
+        console.error(error);
+        // Nếu có lỗi, vẫn đặt loading thành false để hiển thị lỗi hoặc nội dung khác
         setLoading(false);
       }
     };
@@ -50,15 +51,24 @@ const LeaguesPage = ({ t }) => {
     fetchData();
   }, []);
 
-
-
-  if (loading || !tournamentsData || !StandingData) {
+  if (loading) {
     return (
       <section className='flex w-full mt-10 mb-6'>
         <div className='container'>
           <div className="inner-section py-8 px-16 mb-6 ">Loading...</div>
         </div>
-      </section>)
+      </section>
+    );
+  }
+
+  if (!StandingData || !tournamentsData) {
+    return (
+      <section className='flex w-full mt-10 mb-6'>
+        <div className='container'>
+          <div className="inner-section py-8 px-16 mb-6 ">No data available</div>
+        </div>
+      </section>
+    );
   }
 
   const selectedIndex = tab === 'standings' ? 0 : 1;
@@ -71,7 +81,6 @@ const LeaguesPage = ({ t }) => {
   return (
     <section className='flex w-full mt-10 mb-6'>
       <div className='container'>
-
         <div className="inner-section py-8 px-16 mb-6">
           <div className="flex items-center">
             <img className="w-8 h-8" src={tournamentsData.logo} alt="" />
