@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply leading-tight;
+}
+
+.container {
+  max-width: 1312px;
+  @apply px-4 w-full m-auto;
+}
+
+.clamp-1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.socical {
+  @apply flex;
+
+  >li {
+    @apply ml-4;
+
+    img {
+      @apply w-4 h-4 scale-100 transition-all hover:scale-125;
+    }
+  }
+}
+
+.mode {
+  display: flex;
+
+  svg {
+    @apply cursor-pointer w-5 h-5 ml-2 opacity-30 hover:opacity-100;
+
+    &.active {
+      @apply opacity-100;
+    }
+  }
+}
+
+.language {
+  display: flex;
+
+  >p {
+    @apply w-5 h-5 ml-2 opacity-30 hover:opacity-100 cursor-pointer;
+
+    &.active {
+      @apply opacity-100 border-b border-solid border-white;
+    }
+  }
+}
+
+.bg-main-theme {
+  @apply bg-white;
+}
+
+.bg-dark-theme {
+  @apply bg-[#F1F5F9];
+}
+
+.color-themes {
+  @apply text-white;
+}
+
+body {
+  &.is_dark {
+    background-color: #121212;
+
+    .bg-dark-theme {
+      @apply bg-white;
+    }
+
+    .bg-main-theme {
+      @apply bg-[#F1F5F9];
+    }
+
+    .color-themes:hover {
+      @apply text-black;
+    }
+
+
+    .header .header-inner,
+    .inner-section {
+      background-color: rgba(255, 255, 255, 0.2)
+    }
+
+    input,
+    label,
+    ul,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+      @apply text-white
+    }
+
+    a {
+      &:hover {
+        @apply border-white;
+      }
+    }
+
+    svg {
+      path {
+        @apply fill-white;
+      }
+    }
+
+    .form__input,
+    .bg-main {
+      background-color: rgba(255, 255, 255, 0.2)
+    }
+
+    .core_collapse .collapse__content {
+      background-color: #121212;
+    }
+
+    .react-calendar {
+      @apply text-white;
+    }
+
+
+    .list-item .item-inner:hover,
+    .list-item li:hover,
+    .football_match:hover {
+      background-color: rgba(255, 255, 255, 0.2)
+    }
+
+  }
+}
+
+.w_45 {
+  width: 45%;
+}
+
+.w_45 {
+  width: 45%;
+}
+
+.w_10 {
+  width: 10%;
+}
+
+@import "./scss/variable";
+@import "./scss/reset";
+@import "./scss/react-calendar";
+@import "./scss/form";
+@import "./scss/header";
+@import "./scss/list";
+@import "./scss/collapse";
+@import "./scss/component/news";
+@import "./scss/component/swiper";
+@import "./scss/component/table";
+@import "./scss/component/tab";

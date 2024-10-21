@@ -1,0 +1,211 @@
+{
+  "World_Cup": [
+    {
+      "year": 2002,
+      "host": "Hàn Quốc & Nhật Bản",
+      "final": "",
+      "result": [
+        {
+          "img": "/logo/brazil.png",
+          "host": "Brazil",
+          "goal": "2"
+        },
+        {
+          "img": "/logo/germany.png",
+          "host": "Germany",
+          "goal": "0"
+        }
+      ]
+    },
+    {
+      "year": 2006,
+      "host": "Đức",
+      "final": "(Penalty: 5 - 3)",
+      "result": [
+        {
+          "img": "/logo/italy.png",
+          "host": "Italy",
+          "goal": "1"
+        },
+        {
+          "img": "/logo/france.png",
+          "host": "France",
+          "goal": "1"
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "host": "Nam Phi",
+      "final": "",
+      "result": [
+        {
+          "img": "/logo/spain.png",
+          "host": "Spain",
+          "goal": "1"
+        },
+        {
+          "img": "/logo/netherlands.png",
+          "host": "Netherlands",
+          "goal": "0"
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "host": "Brazil",
+      "final": "",
+      "result": [
+        {
+          "img": "/logo/germany.png",
+          "host": "Germany",
+          "goal": "1"
+        },
+        {
+          "img": "/logo/argentina.png",
+          "host": "Argentina",
+          "goal": "0"
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "host": "Nga",
+      "final": "",
+      "result": [
+        {
+          "img": "/logo/france.png",
+          "host": "France",
+          "goal": "4"
+        },
+        {
+          "img": "/logo/croatia.png",
+          "host": "Croatia",
+          "goal": "2"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "host": "Qatar",
+      "final": "(Penalty: 4 - 2)",
+      "result": [
+        {
+          "img": "/logo/argentina.png",
+          "host": "Argentina",
+          "goal": "3"
+        },
+        {
+          "img": "/logo/france.png",
+          "host": "France",
+          "goal": "3"
+        }
+      ]
+    }
+  ],
+  "Euro": [
+    {
+      "year": 2000,
+      "host": "Bỉ & Hà Lan",
+      "final": "",
+      "result": [
+        {
+          "img": "/logo/france.png",
+          "host": "France",
+          "goal": "2"
+        },
+        {
+          "img": "/logo/italy.png",
+          "host": "Italy",
+          "goal": "1"
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "host": "Bồ Đào Nha",
+      "final": "",
+      "result": [
+        {
+          "img": "/logo/greece.png",
+          "host": "Greece",
+          "goal": "2"
+        },
+        {
+          "img": "/logo/portugal.png",
+          "host": "Portugal",
+          "goal": "1"
+        }
+      ]
+    },
+    {
+      "year": 2008,
+      "host": "Áo & Thụy Sĩ",
+      "final": "",
+      "result": [
+        {
+          "img": "/logo/spain.png",
+          "host": "Spain",
+          "goal": "1"
+        },
+        {
+          "img": "/logo/germany.png",
+          "host": "Germany",
+          "goal": "0"
+        }
+      ]
+    },
+    {
+      "year": 2012,
+      "host": "Ba Lan & Ukraina",
+      "final": "",
+      "result": [
+        {
+          "img": "/logo/spain.png",
+          "host": "Spain",
+          "goal": "4"
+        },
+        {
+          "img": "/logo/italy.png",
+          "host": "Italy",
+          "goal": "0"
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "host": "Pháp",
+      "champion": "Portugal",
+      "final": "(120')",
+      "result": [
+        {
+          "img": "/logo/Portugal.png",
+          "host": "Portugal",
+          "goal": "1"
+        },
+        {
+          "img": "/logo/france.png",
+          "host": "France",
+          "goal": "0"
+        }
+      ]
+    },
+    {
+      "year": "2020 - 2021",
+      "host": "England",
+      "final": "(Penalty: 3 - 2)",
+      "result": [
+        {
+          "img": "/logo/italy.png",
+          "host": "Italy",
+          "goal": "1"
+        },
+        {
+          "img": "/logo/england.png",
+          "host": "England",
+          "goal": "1"
+        }
+      ]
+    }
+  ]
+}

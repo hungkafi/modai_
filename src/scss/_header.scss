@@ -1,0 +1,148 @@
+.header {
+   @apply h-[80px] flex items-center relative z-10;
+
+   .header-inner {
+      @apply h-[80px] fixed top-0 w-full flex items-center;
+      box-shadow: $shadow;
+      -webkit-backdrop-filter: saturate(180%) blur(8px);
+      backdrop-filter: saturate(180%) blur(8px);
+      background: rgba(255, 255, 255, 0.85);
+   }
+
+   &__right {
+      @apply ml-auto flex items-center;
+
+      .setting {
+         @apply pr-4 border-r border-solid border-primary;
+      }
+   }
+}
+
+#main-nav {
+   .menu {
+      display: flex;
+      margin-left: 40px;
+      height: 100%;
+      color: black;
+
+      li.active {
+         a {
+            // color: $primary-color;
+            @apply font-smb;
+         }
+      }
+
+      >li {
+         position: relative;
+         margin-right: 32px;
+         padding: 30px 0;
+
+         .sub-menu {
+            @apply transition-all;
+            padding: 16px;
+            min-width: max-content;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: $shadow;
+            transform: translateY(10px);
+
+            li {
+               &:not(:last-child) {
+                  margin-bottom: 12px;
+               }
+            }
+         }
+      }
+   }
+
+   &.active {
+      display: block;
+   }
+
+}
+
+.mobile-button {
+   display: none;
+   width: 28px;
+   height: 28px;
+   margin-left: auto;
+}
+
+.main-nav--mobile {
+   display: none;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   z-index: 20;
+   left: 0%;
+   background-color: rgba(0, 0, 0, 0.5);
+   top: 0;
+   opacity: 0;
+   @apply transition-all;
+   visibility: hidden;
+
+   &.active {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+
+      .main-nav--mobile__inner {
+         opacity: 1;
+         visibility: visible;
+         @apply transition-all;
+         transform: translateX(0);
+      }
+   }
+
+   .main-nav--mobile__inner {
+      opacity: 0;
+      visibility: hidden;
+      position: relative;
+      background-color: #161616;
+      width: calc(100vw - 70px);
+      max-width: calc(100vw - 70px);
+      padding: 40px 24px 24px;
+      height: 100%;
+      transform: translateX(-40px);
+
+      #main-nav {
+         margin-top: 32px;
+
+         .menu {
+            margin-left: 0;
+            flex-direction: column;
+
+            >li {
+               margin-right: 0;
+               padding: 20px 0;
+               font-size: 20px;
+
+               a {
+                  color: white;
+               }
+
+               &.toggle {
+                  .sub-menu {
+                     display: block;
+                  }
+               }
+
+               .sub-menu {
+                  background-color: transparent;
+                  display: none;
+                  position: relative;
+               }
+            }
+         }
+      }
+
+   }
+
+   .mobile-button--close {
+      position: absolute;
+      right: 8px;
+      top: 16px;
+      z-index: 12;
+      padding: 8px;
+   }
+}

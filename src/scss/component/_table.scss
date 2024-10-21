@@ -1,0 +1,45 @@
+.core_table {
+  @apply w-full;
+
+  th,
+  td {
+    @apply p-2 text-black;
+  }
+
+  tr {
+    &:not(:last-child) {
+      @apply border-b border-solid;
+      border-color: $color-main;
+
+    }
+
+    &:hover {
+      background-color: $color-main;
+    }
+  }
+
+  th {
+    @apply font-smb;
+  }
+}
+
+.is_dark {
+
+  .core_table {
+
+    th,
+    td {
+      @apply text-white;
+    }
+
+    tr {
+      &:hover {
+
+        th,
+        td {
+          @apply text-black;
+        }
+      }
+    }
+  }
+}

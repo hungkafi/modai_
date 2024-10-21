@@ -1,0 +1,68 @@
+.list-item {
+
+  .item-inner,
+  li {
+    @apply flex items-center text-sm py-2 px-4 border-none;
+
+    img {
+      @apply w-4 h-4 mr-3;
+    }
+  }
+}
+
+.football_match {
+  @apply p-4 flex items-center;
+
+  .finalOdd {
+    @apply text-[10px] p-1.5 rounded-lg bg-main;
+  }
+
+  >p {
+
+    &:nth-child(3),
+    &:nth-child(1) {
+      @apply w-[46%]
+    }
+
+    &:nth-child(2) {
+      @apply w-[8%]
+    }
+  }
+
+  &:hover {
+    background-color: $color-main;
+  }
+}
+
+.info-component {
+  @apply p-3 rounded-md overflow-hidden text-[10px];
+  @apply bg-main;
+
+  .title {
+    @apply text-xs font-smb text-center mb-2;
+  }
+
+  .items {
+    @apply flex w-1/2 items-center justify-end;
+
+    .icon {
+      @apply w-4 h-4 mx-1.5;
+    }
+
+    &:nth-child(1) {
+
+      @apply relative pr-2;
+
+      &::after {
+        @apply absolute top-0 text-white;
+        right: -3px;
+        content: "-";
+        top: 2px;
+      }
+    }
+
+    &:nth-child(2) {
+      @apply flex-row-reverse justify-end pl-2;
+    }
+  }
+}
